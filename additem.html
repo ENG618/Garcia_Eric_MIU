@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<!-- 	Eric Garcia
+				VFW 1304
+				4/11/13
+				Web App Part 4
+				App addItem page  -->
+		<!-- Character Set Meta -->
+		<meta charset='utf-8' />
+		<meta name='discription' content='My first web app using HTML5' />
+		<meta name='keyword' content='html5, web app, Full Sail, FVW' />
+		<meta name='robots' content'index, follow' />
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!-- <meta name='viewport' content='target-densitydpi=device-dpi' /> -->
+		<!-- Page Title -->
+		<title>Memory Vault</title>
+		<!-- Call CSS File -->
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href='font/roboto.css' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+		<h1><a href='index.html'>New Memory</a></h1>
+		<nav>
+			<a href='#' id='loadSavedData'>Recall Memories</a><br>
+			<a href='#' id='clearSavedData'>Erase All Memories</a><br>
+			<a href='additem.html' id='addNewMemory' style='display:none'>Add New Memory</a><br>
+			<a href='search.html' id='search'>Search</a>
+		</nav>
+		<form action='#' method='post' id='form'>
+				<legend>Important Memory</legend>
+			<ul>
+				<ul id='errors'></ul>
+				<ul>
+				<li><label for='occasion'>Occasion</label><br /><input type='text' id='occasion' title='Type the memories occasion' /></li>
+				<li><label for='date'>Date</label><br /><input type='date' id='date' /></li>
+				<li><label for='importance'>Importance</label><br /><input type='range'id='importance' /></li>
+				<li id='addHTML'><label for='mood'>Mood of even</label><br /></li>
+				<li>Memory shared with?
+						<li><input type='checkbox' value='Family' id='family' name='sharedWith' /><label for='family'>Family</label></li>
+						<li><input type='checkbox' value='Significant other' id='significantOther' name='sharedWith' /><label for='significantOther'>Significant other</label></li>
+						<li><input type='checkbox' value='Friends' id='friends' name='sharedWith' /><label for='friends'>Friends</label></li>
+						<li><input type='checkbox' value='Co-workers' id='co-workers' name='sharedWith' /><label for='co-workers'>Co-workers</label></li>
+						<li><input type='checkbox' value='Self' id=self name='sharedWith' /><label for='self'>Self</label></li>
+						<li><input type='checkbox' value='Other' id='other' name='sharedWith' /><label for='other'>Other</label></li>
+					</ul>
+				</li>
+				<li><label for='notes'>Notes</label></li><textarea id='notes'>Describe this occasion here...</textarea>
+				<li type='hidden' value='someValue'></li>
+			</ul>
+			<button type='button' id='save' />Add Memory to Vault!!</button>
+		</form>
+		<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
+		<!-- Call JavaScript File -->
+		<script src='js/json.js' type='text/javascript'></script>
+		<script src='js/main.js' type='text/javascript'></script>
+	</body>
+</html>
