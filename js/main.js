@@ -85,12 +85,12 @@ window.addEventListener('DOMContentLoaded', function(){
 			id = key;
 		}
 		var memory 				= {};
-		memory.occasion 		= ['Occasion:', gebid('occasion').value];
-		memory.date 			= ['Date:', gebid('date').value];
-		memory.importance 		= ['Importance:', gebid('importance').value];
-		memory.eventMood		= ['Mood:', gebid('mood').value];
-		memory.including	 	= ['Shared With:', getCheckedValues()];
-		memory.notes 			= ['Notes:', gebid('notes').value];
+		memory.occasion 		= ['Occasion: ', gebid('occasion').value];
+		memory.date 			= ['Date: ', gebid('date').value];
+		memory.importance 		= ['Importance: ', gebid('importance').value];
+		memory.eventMood		= ['Mood: ', gebid('mood').value];
+		memory.including	 	= ['Shared With: ', getCheckedValues()];
+		memory.notes 			= ['Notes: ', gebid('notes').value];
 		// Save data to local Storage
 		localStorage.setItem(id, JSON.stringify(memory));
 		alert('Your memory is safe!!');
@@ -213,11 +213,12 @@ window.addEventListener('DOMContentLoaded', function(){
 		gebid('notes').value = memory.notes[1];
 
 		// Remove save event listener
-		save.removeEventListener('click', saveForm);
+		save.removeEventListener('click', validate);
 
 		// Change save button to edit button
-		save.value = 'Edit Memory';
+		save.innerHTML = 'Edit Memory';
 		var editSave = save;
+		console.log('test');
 		// Save key value of memory selected to edit so it can be overwrote by the new info.
 		editSave.addEventListener('click', validate);
 		editSave.key = this.key;
