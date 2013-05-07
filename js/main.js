@@ -210,6 +210,7 @@ window.addEventListener('DOMContentLoaded', function(){
 				}
 			}
 		}
+		gebid('notes').value = memory.notes[1];
 
 		// Remove save event listener
 		save.removeEventListener('click', saveForm);

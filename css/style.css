@@ -59,11 +59,9 @@ body {
 
 legend {
 	font-weight: bold;
-	/*font-size: 12px;*/
 	color: #C22D2D;
 	margin: 5px 15px;
-/*	padding: 5px;
-*/}
+}
 
 form {
 	position: relative;
@@ -114,7 +112,7 @@ footer{
 	padding: 10px;
 }
 
-#errors {
+form ul li #errors {
 	color: red;
 	font-family: RobotoBold;
 }
