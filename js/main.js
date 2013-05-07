@@ -7,13 +7,13 @@ window.addEventListener('DOMContentLoaded', function(){
 	//Variables
 	var eventMood = ['--Choose Mood--', 'Fun', 'Memorable', 'Sad'];
 	var	sharedWith;
-	var loadSavedData = $('loadSavedData');
-	var clearSavedData = $('clearSavedData');
-	var save = $('save');
-	var errorMsg = $('errors');
+	var loadSavedData = gebid('loadSavedData');
+	var clearSavedData = gebid('clearSavedData');
+	var save = gebid('save');
+	var errorMsg = gebid('errors');
 
 	// getElementById Function
-	function $(x){
+	function gebid(x){
 		var elementRequested = document.getElementById(x);
 		return elementRequested;
 	}
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	// Create mood field element and populate with options
 	function creatMoodField(){
 		var formTag = document.getElementsByTagName('form'),
-			moodLi = $('addHTML'),
+			moodLi = gebid('addHTML'),
 			makeMood = document.createElement('select');
 			// Need to correct this element
 			makeMood.setAttribute('id', 'mood');
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	// Get checked values
 	function getCheckedValues(){
-		var checkboxes = $('form').sharedWith,
+		var checkboxes = gebid('form').sharedWith,
 			checkedValues = [];
 		for (i=0; i<checkboxes.length; i++){
 			if(checkboxes[i].checked ){
@@ -60,17 +60,17 @@ window.addEventListener('DOMContentLoaded', function(){
 	function toggleNav(x){
 		switch(x){
 			case 'on':
-				$('form').style.display = 'none';
-				$('clearSavedData').style.display = 'inline';
-				$('loadSavedData').style.display = 'none';
-				$('addNewMemory').style.display = 'block';
+				gebid('form').style.display = 'none';
+				gebid('clearSavedData').style.display = 'inline';
+				gebid('loadSavedData').style.display = 'none';
+				gebid('addNewMemory').style.display = 'block';
 				break;
 			case 'off':
-				$('form').style.display = 'block';
-				$('clearSavedData').style.display = 'inline';
-				$('loadSavedData').style.display = 'inline';
-				$('addNewMemory').style.displa = 'none';
-				$('memories').style.display = 'none';
+				gebid('form').style.display = 'block';
+				gebid('clearSavedData').style.display = 'inline';
+				gebid('loadSavedData').style.display = 'inline';
+				gebid('addNewMemory').style.displa = 'none';
+				gebid('memories').style.display = 'none';
 				break;
 			default:
 				return false;
@@ -85,12 +85,12 @@ window.addEventListener('DOMContentLoaded', function(){
 			id = key;
 		}
 		var memory 				= {};
-		memory.occasion 		= ['Occasion:', $('occasion').value];
-		memory.date 			= ['Date:', $('date').value];
-		memory.importance 		= ['Importance:', $('importance').value];
-		memory.eventMood		= ['Mood:', $('mood').value];
+		memory.occasion 		= ['Occasion:', gebid('occasion').value];
+		memory.date 			= ['Date:', gebid('date').value];
+		memory.importance 		= ['Importance:', gebid('importance').value];
+		memory.eventMood		= ['Mood:', gebid('mood').value];
 		memory.including	 	= ['Shared With:', getCheckedValues()];
-		memory.notes 			= ['Notes:', $('notes').value];
+		memory.notes 			= ['Notes:', gebid('notes').value];
 		// Save data to local Storage
 		localStorage.setItem(id, JSON.stringify(memory));
 		alert('Your memory is safe!!');
@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			var makeList = document.createElement('ul');
 			makeDiv.appendChild(makeList);
 			document.body.appendChild(makeDiv);
-			$('memories').style.display = 'block';
+			gebid('memories').style.display = 'block';
 			for (var i=0; i<localStorage.length; i++){
 				var makeLi = document.createElement('li');
 				var linksLi = document.createElement('li');
@@ -195,11 +195,11 @@ window.addEventListener('DOMContentLoaded', function(){
 		toggleNav('off');
 
 		// Populate form fields
-		$('occasion').value = memory.occasion[1];
-		$('date').value = memory.date[1];
-		$('importance').value = memory.importance[1];
-		$('mood').value = memory.eventMood[1];
-		var checkboxes = $('form').sharedWith;
+		gebid('occasion').value = memory.occasion[1];
+		gebid('date').value = memory.date[1];
+		gebid('importance').value = memory.importance[1];
+		gebid('mood').value = memory.eventMood[1];
+		var checkboxes = gebid('form').sharedWith;
 		var y = memory.including[1];
 		for(var x=0; x<y.length; x++){
 			if(y.length >= 1){
@@ -237,9 +237,9 @@ window.addEventListener('DOMContentLoaded', function(){
 	// Validate form fields function
 	function validate(e){
 		// Define elements that need to be validated
-		var getOccasion = $('occasion'),
-			getDate 	= $('date'),
-			getMood 	= $('mood');
+		var getOccasion = gebid('occasion'),
+			getDate 	= gebid('date'),
+			getMood 	= gebid('mood');
 
 		// Reset error message
 		errorMsg.innerHTML = '';
