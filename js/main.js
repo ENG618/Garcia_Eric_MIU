@@ -218,7 +218,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		// Change save button to edit button
 		save.innerHTML = 'Edit Memory';
 		var editSave = save;
-		console.log('test');
+
 		// Save key value of memory selected to edit so it can be overwrote by the new info.
 		editSave.addEventListener('click', validate);
 		editSave.key = this.key;
