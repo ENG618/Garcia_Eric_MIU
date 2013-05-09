@@ -20,6 +20,11 @@
 		<!-- Call CSS File -->
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href='font/roboto.css' rel='stylesheet' type='text/css' />
+		<style>
+			li {
+				max-width: 200px;
+			}
+		</style>
 
 	</head>
 	<header>
@@ -28,10 +33,25 @@
 
 	<!-- body tag -->
 	<body>
-		
-		<!-- Page Content Lives Here -->
-		<p>Never forget another important memory!! Simply upload them here and save them in your very own <q>Memory Vault</q>!!</p>
-		<button type="button"><a href="additem.html">Create a Memory</a></button>
+
+		<!-- CTA -->
+		<div>
+			<a href="additem.html"><img src="img/MiU-CTA_rev3.jpg"></a>
+		</div>
+		<!-- Search button -->
+		<div>
+			<input type='text' id=searchField><a href="search.html"><button type='button'>Search</button></a>
+		</div>
+		<!-- Browse Memories -->
+		<h2>Browse Memories by:</h2>
+		<ul class='browse'>
+			<li><a href="search.html">Occasion</a></li>
+			<li><a href="search.html">Date</a></li>
+			<li><a href="search.html">Importance</a></li>
+			<li><a href="search.html">Mood</a></li>
+			<li><a href="search.html">Shared With</a></li>
+		</ul>
+
 		<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
 	</body>
 </html>

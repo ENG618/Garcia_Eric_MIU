@@ -265,7 +265,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 		// Mood validation
 		if(getMood.value === '--Choose Mood--' ){
-			var moodError = 'Setting the mood makes memory better!!';
+			var moodError = 'Setting the mood makes memories better!!';
 			getMood.style.border = '1px solid red';
 			errorMsgAry.push(moodError);
 		}
