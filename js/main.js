@@ -1,6 +1,6 @@
 // Eric Garcia
-// VFW 1304
-// Project 2
+// MIU 1305
+// Project 1
 
 window.addEventListener('DOMContentLoaded', function(){
 
