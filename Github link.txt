@@ -1,1 +1,5 @@
+Git Hub Link:
+https://github.com/eng618
+
+Link to working gh-pages app:
 http://eng618.github.io/Garcia_Eric_MIU/
