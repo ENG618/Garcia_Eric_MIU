@@ -17,38 +17,53 @@
 		<!-- <meta name="viewport" content="target-densitydpi=device-dpi" /> -->
 		<!-- Page Title -->
 		<title>Memory Vault</title>
+		<!-- Call jQueryMobile css -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<!-- Call CSS File -->
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href='font/roboto.css' rel='stylesheet' type='text/css' />
 
 	</head>
-	<header>
-		<h1><a href='index.html'>Memory Vault</a></h1>
-	</header>
-
 	<!-- body tag -->
 	<body>
+		<!-- Home page -->
+		<div data-role='page' id='home'>
+			<!-- Header -->
+			<div data-role='header' data-position='fixed'>
+				<header>
+					<h1><a href='index.html'>Memory Vault</a></h1>
+				</header>
+			</div> <!-- End of header -->
 
-		<!-- Feature -->
-		<div>
-			<a href="additem.html"><img src="img/MiU-CTA_rev4.jpg"></a>
-		</div>
-		<!-- Search button -->
-		<div>
-			<input type='text' id=searchField><a href="search.html"><button type='button'>Search</button></a>
-		</div>
-		<!-- Browse Memories -->
-		<div>
-			<h2>Browse Memories by:</h2>
-			<ul class='browse'>
-				<li><a href="search.html">Occasion</a></li>
-				<li><a href="search.html">Date</a></li>
-				<li><a href="search.html">Importance</a></li>
-				<li><a href="search.html">Mood</a></li>
-				<li><a href="search.html">Shared With</a></li>
-			</ul>
-		</div>
+			<!-- Feature -->
+			<div data-role='content'>
+				<a href="additem.html"><img src="img/MiU-CTA_rev4.jpg"></a>
+			</div> <!-- End of Feature -->
 
-		<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
+			<!-- Search button -->
+			<div data-role='content'>
+				<input type='text' id=searchField><a href="search.html"><button type='button'>Search</button></a>
+			</div> <!-- End of Search -->
+			<!-- Browse Memories -->
+			<div>
+				<h2>Browse Memories by:</h2>
+				<ul class='browse'>
+					<li><a href="search.html">Occasion</a></li>
+					<li><a href="search.html">Date</a></li>
+					<li><a href="search.html">Importance</a></li>
+					<li><a href="search.html">Mood</a></li>
+					<li><a href="search.html">Shared With</a></li>
+				</ul>
+			</div><!-- End of Browse Memories -->
+			<!-- Footer -->
+			<div data-role='footer'>
+				<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
+			</div> <!-- End of footer -->
+		</div> <!-- End of home page -->
+
+		<!-- Call jQueryMobile -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<!-- Call js file -->
 	</body>
 </html>
