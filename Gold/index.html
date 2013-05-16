@@ -46,7 +46,7 @@
 				<!-- <input type='text' id=searchField><a href="search.html"><button type='button'>Search</button></a> -->
 			</div> <!-- End of Search -->
 			<!-- Browse Memories -->
-			<div>
+			<div data-role='content'>
 				<h2>Browse Memories by:</h2>
 				<ul class='browse'>
 					<li><a href="search.html" data-ajax='false'>Occasion</a></li>
@@ -64,6 +64,7 @@
 			<div data-role='navbar' data-position='fixed'>
 				<ul>
 					<li><a href='#home' class="ui-btn-active" data-icon='home'>Home</a></li>
+					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
 					<li><a href='#aboutUs' data-icon='info'>About Us</a></li>
 				</ul>
 			</div> <!-- End Navigation -->
@@ -78,11 +79,40 @@
 					<h1><a href='#home'>Memory Vault</a></h1>
 				</header>
 			</div> <!-- End of header -->
+			<!-- Content -->
+			<div data-role='content'>
+				<ul data-role="listview" data-inset="true">
+				    <li><a href="#">Bronz gh-pages</a></li>
+				    <li><a href="#">Gold gh-pages</a></li>
+				    <li><a href="https://github.com/ENG618/Garcia_Eric_MIU" data-ajax='false'>Git Repo</a></li>
+				    <li><a href="http://eng618.github.io/Garcia_Eric_MIU/Bronz/" data-ajax='false'>Bronz App</a></li>
+				</ul>
+				<!-- About Author -->
+				<div data-role="collapsible" data-theme="b" data-content-theme="c">
+				    <h2>About the author</h2>
+				    <ul data-role="listview">
+				        <li><a href="https://plus.google.com/u/0/117454855184907306981/posts" data-ajax='false'>Google+</a></li>
+					    <li><a href="https://www.facebook.com/garciaericn" data-ajax='false'>Facebook</a></li>
+						<li><a href="https://twitter.com/NexusGenMods" data-ajax='false'>Twiter</a></li>
+				    </ul>
+				</div> <!-- End About Author -->
+				<!-- Credits -->
+				<div data-role="collapsible" data-theme="b" data-content-theme="c">
+				    <h2>Credits</h2>
+				    <ul data-role="listview">
+				        <li><a href="http://www.lynda.com/tutorial/100222?org=fullsail.edu" data-ajax='false'>Git Training</a></li>
+					    <li><a href="http://www.lynda.com/tutorial/81266?org=fullsail.edu" data-ajax='false'>js Training</a></li>
+						<li><a href="http://view.jquerymobile.com/1.3.1/dist/demos/" data-ajax='false'>jQuery Mobile</a></li>
+				    </ul>
+				</div> <!-- End Credits -->
+			</div> <!-- End Content -->
+
 
 			<!-- Navigation -->
 			<div data-role='navbar' data-position='fixed'>
 				<ul>
 					<li><a href='#home' data-icon='home'>Home</a></li>
+					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
 					<li><a href='#aboutUs' class="ui-btn-active" data-icon='info'>About Us</a></li>
 				</ul>
 			</div> <!-- End Navigation -->
