@@ -41,7 +41,7 @@ Project1
 		box-shadow: inset 0 0 4px #000;
 	}
 
-	nav a {
+	ul li a {
 		color: #BD8620;
 		text-decoration: none;
 	}

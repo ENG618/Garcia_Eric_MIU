@@ -17,6 +17,7 @@
 		<!-- <meta name="viewport" content="target-densitydpi=device-dpi" /> -->
 		<!-- Page Title -->
 		<title>Memory Vault</title>
+		<!-- Call jQuery style -->
 		<!-- Call CSS File -->
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href='font/roboto.css' rel='stylesheet' type='text/css' />
@@ -28,21 +29,36 @@
 
 	<!-- body tag -->
 	<body>
-		<nav>
-			<a href='additem.html' id='loadSavedData'>Recall Memories</a><br>
-			<a href='#' id='clearSavedData'>Erase All Memories</a><br>
-			<a href='additem.html' id='addNewMemory' style='display:none'>Add New Memory</a><br>
-			<a href='search.html' id='search'>Search</a>
-		</nav>
-		<p>Under Construction</p>
-
-		<form action='#' method='post' id='searchForm'>
-			<fieldset>
-				
-			</fieldset>
-			<button type="button" id='searchBtn'>Search</button>
-		</form>
-		<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
+		<!-- Search Page -->
+		<div>
+			<!-- Navigation -->
+			<div>
+				<ul>
+					<li><a href='additem.html' id='loadSavedData'>Recall Memories</a></li>
+					<li><a href='#' id='clearSavedData'>Erase All Memories</a></li>
+					<li><a href='additem.html' id='addNewMemory' style='display:none'>Add New Memory</a></li>
+					<li><a href='search.html' id='search'>Search</a></li>
+				</ul>
+			</div> <!-- End Navigation -->
+			<!-- Form -->
+			<div>
+				<fieldset>
+					<form action='#' method='post' id='form'>
+						<ul>
+							<li id='addCategories'><label for='mood'>Mood of even</label><br /></li>
+						</ul>
+						<input type='text' for='search' placeholder='search' id='searchField' />
+						<button type="button" id='searchBtn'>Search</button>
+					</form>
+				</fieldset>
+			</div> <!-- End Form -->
+			<!-- Footer -->
+			<div> 
+				<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
+			</div> <!-- End Footer -->
+		</div> <!-- End Search Page -->
+		<!-- Call jQuery -->
+		<!-- Call JavaScript -->
 		<script src='js/json.js' type='text/javascript'></script>
 		<script src='js/main.js' type='text/javascript'></script>
 	</body>

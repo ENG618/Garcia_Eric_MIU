@@ -27,20 +27,20 @@
 	<!-- body tag -->
 	<body>
 		<!-- Home page -->
-		<div data-role='page' id='home'>
+		<div data-role='page' id='home' >
 			<!-- Header -->
 			<div data-role='header' data-position='fixed'>
 				<header>
-					<h1><a href='index.html'>Memory Vault</a></h1>
+					<h1><a href='#home'>Memory Vault</a></h1>
 				</header>
 			</div> <!-- End of header -->
 
 			<!-- Feature -->
 			<div data-role='content'>
-				<a href="addItem.html"><img src="img/MiU-CTA_rev4.jpg"></a>
+				<a href="addItem.html" data-ajax='false'><img src="img/MiU-CTA_rev4.jpg"></a>
 			</div> <!-- End of Feature -->
 
-			<!-- Search button -->
+			<!-- Search -->
 			<div data-role='content'>
 				<input type="search" id="search" value="" placeholder="Search">
 				<!-- <input type='text' id=searchField><a href="search.html"><button type='button'>Search</button></a> -->
@@ -49,44 +49,47 @@
 			<div>
 				<h2>Browse Memories by:</h2>
 				<ul class='browse'>
-					<li><a href="search.html">Occasion</a></li>
-					<li><a href="search.html">Date</a></li>
-					<li><a href="search.html">Importance</a></li>
-					<li><a href="search.html">Mood</a></li>
-					<li><a href="search.html">Shared With</a></li>
+					<li><a href="search.html" data-ajax='false'>Occasion</a></li>
+					<li><a href="search.html" data-ajax='false'>Date</a></li>
+					<li><a href="search.html" data-ajax='false'>Importance</a></li>
+					<li><a href="search.html" data-ajax='false'>Mood</a></li>
+					<li><a href="search.html" data-ajax='false'>Shared With</a></li>
 				</ul>
 			</div><!-- End of Browse Memories -->
 			<!-- Footer -->
 			<div data-role='footer'>
 				<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
-			</div> <!-- End of footer -->
-		</div> <!-- End of home page -->
+			</div> <!-- End footer -->
+			<!-- Navigation -->
+			<div data-role='navbar' data-position='fixed'>
+				<ul>
+					<li><a href='#home' class="ui-btn-active" data-icon='home'>Home</a></li>
+					<li><a href='#aboutUs' data-icon='info'>About Us</a></li>
+				</ul>
+			</div> <!-- End Navigation -->
 
-		<!-- addItem page -->
-		<div data-role='page' id='addItem'>
+		</div> <!-- End Home -->
+		
+		<!-- About Us -->
+		<div data-role-'page' id='aboutUs'>
 			<!-- Header -->
 			<div data-role='header' data-position='fixed'>
 				<header>
-					<h1><a href='#home'>Add Memory</a></h1>
+					<h1><a href='#home'>Memory Vault</a></h1>
 				</header>
 			</div> <!-- End of header -->
-			<!-- navbar -->
-			<div data-role='navbar' data-grid='d'>
+
+			<!-- Navigation -->
+			<div data-role='navbar' data-position='fixed'>
 				<ul>
-					<li><a href='#' id='loadSavedData'>Recall Memories</a></li>
-					<li><a href='#' id='clearSavedData'>Erase All Memories</a></li>
-					<li><a href='addItem.html' id='addNewMemory' style='display:none'>Add New Memory</a></li>
-					<li><a href='search.html' id='search'>Search</a></li>
+					<li><a href='#home' data-icon='home'>Home</a></li>
+					<li><a href='#aboutUs' class="ui-btn-active" data-icon='info'>About Us</a></li>
 				</ul>
-			</div> <!-- /navbar -->
+			</div> <!-- End Navigation -->
 
 
+		</div>
 
-				<!-- Footer -->
-				<div data-role='footer'>
-					<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
-				</div> <!-- End of footer -->
-		</div> <!-- End of addItem Page -->
 
 		<!-- Call jQueryMobile -->
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
