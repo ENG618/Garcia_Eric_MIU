@@ -84,13 +84,13 @@ window.addEventListener('DOMContentLoaded', function(){
 		}else{
 			id = key;
 		}
-		var memory 				= {};
-		memory.occasion 		= ['Occasion: ', gebid('occasion').value];
-		memory.date 			= ['Date: ', gebid('date').value];
-		memory.importance 		= ['Importance: ', gebid('importance').value];
-		memory.eventMood		= ['Mood: ', gebid('mood').value];
-		memory.including	 	= ['Shared With: ', getCheckedValues()];
-		memory.notes 			= ['Notes: ', gebid('notes').value];
+		var memory = {};
+		memory.occasion = ['Occasion: ', gebid('occasion').value];
+		memory.date = ['Date: ', gebid('date').value];
+		memory.importance = ['Importance: ', gebid('importance').value];
+		memory.eventMood = ['Mood: ', gebid('mood').value];
+		memory.including = ['Shared With: ', getCheckedValues()];
+		memory.notes = ['Notes: ', gebid('notes').value];
 		// Save data to local Storage
 		localStorage.setItem(id, JSON.stringify(memory));
 		alert('Your memory is safe!!');
@@ -240,8 +240,8 @@ window.addEventListener('DOMContentLoaded', function(){
 	function validate(e){
 		// Define elements that need to be validated
 		var getOccasion = gebid('occasion'),
-			getDate 	= gebid('date'),
-			getMood 	= gebid('mood');
+			getDate = gebid('date'),
+			getMood = gebid('mood');
 
 		// Reset error message
 		errorMsg.innerHTML = '';
@@ -286,9 +286,36 @@ window.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-/*	function search () {
+	// Create mood field element and populate with options
+	function creatMoodSearch(){
+		var formTag = document.getElementsByTagName('form'),
+			moodLi = gebid('addCategories'),
+			makeMood = document.createElement('select');
+			// Need to correct this element
+			makeMood.setAttribute('id', 'mood');
+		for (var i=0; i<eventMood.length; i++){
+			var makeOption = document.createElement('option');
+			var optText = eventMood[i];
+			makeOption.setAttribute('value', optText);
+			makeOption.innerHTML = optText;
+			makeMood.appendChild(makeOption);
+		}
+		moodLi.appendChild(makeMood);
+	} // End createMoodSearch
+
+
+	// Search
+	var searchBtn = gebid('searchBtn');
+	var getMood = gebid('mood');
+	var searchField = gebid('searchField');
+
+	// Search
+	function getSearch () {
 		// No selections
-		if groups;
+		console.log(getMood.value);
+		if (getMood.value == '--Choose Mood--' && searchField.value === ""){
+			alert('Please enter a category or term to search.');
+		}
 
 		// Search by mood only
 
@@ -296,13 +323,18 @@ window.addEventListener('DOMContentLoaded', function(){
 
 		// Search by mood and text
 
-	}
-*/
+	} // End getSearch
+
 	// Display/Clear data & Submit links
 	loadSavedData.addEventListener('click', loadData);
 	clearSavedData.addEventListener('click', clearData);
-	save.addEventListener('click', validate);
-
-	creatMoodField();
+	if (save){
+		save.addEventListener('click', validate);
+		creatMoodField();
+	}
+	if (searchBtn){
+		searchBtn.addEventListener('click', getSearch);
+		creatMoodSearch();
+	}
 });
 
