@@ -20,19 +20,17 @@
 		<!-- Call jQueryMobile css -->
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<!-- Call CSS File -->
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
-		<link href='font/roboto.css' rel='stylesheet' type='text/css' />
+		<!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href='font/roboto.css' rel='stylesheet' type='text/css' /> -->
 
 	</head>
 	<!-- body tag -->
 	<body>
 		<!-- Home page -->
-		<div data-role='page' id='home' >
+		<div data-role='page' id='home'>
 			<!-- Header -->
 			<div data-role='header' data-position='fixed'>
-				<header>
-					<h1><a href='#home'>Memory Vault</a></h1>
-				</header>
+					<h1>Memory Vault</h1>
 			</div> <!-- End of header -->
 
 			<!-- Feature -->
@@ -48,7 +46,7 @@
 			<!-- Browse Memories -->
 			<div data-role='content'>
 				<h2>Browse Memories by:</h2>
-				<ul class='browse'>
+				<ul class='browse' data-role='listview' data-inset='true'>
 					<li><a href="search.html" data-ajax='false'>Occasion</a></li>
 					<li><a href="search.html" data-ajax='false'>Date</a></li>
 					<li><a href="search.html" data-ajax='false'>Importance</a></li>
@@ -65,19 +63,51 @@
 				<ul>
 					<li><a href='#home' class="ui-btn-active" data-icon='home'>Home</a></li>
 					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
+					<li><a href="#recentMem" data-icon='grid'>Recent</a></li>
 					<li><a href='#aboutUs' data-icon='info'>About Us</a></li>
 				</ul>
 			</div> <!-- End Navigation -->
-
 		</div> <!-- End Home -->
-		
+		<!-- Recent Memories -->
+		<div data-role='page' id='recentMem' data-add-back-btn="true">
+			<div data-role='header' data-position='fixed'>
+					<h1>Memory Vault</h1>
+			</div> <!-- End of header -->
+			<div>
+				<ul data-role="listview" data-inset="true">
+				    <li><a href="#">
+				        <img src="img/Memorable.png">
+				        <h2>Noah was born</h2>
+				        <p>Life changing</p></a>
+				    </li>
+				    <li><a href="#">
+				        <img src="img/Fun.png">
+				        <h2>Started School</h2>
+				        <p>MDVBS is awesome!!</p></a>
+				    </li>
+				    <li><a href="#">
+				        <img src="img/Sad.png">
+				        <h2>Wolfgang Amadeus Phoenix</h2>
+				        <p>Phoenix</p></a>
+				    </li>
+				</ul>
+				
+			</div> <!-- End Contend -->
+			<!-- Navigation -->
+			<div data-role='navbar' data-position='fixed'>
+				<ul>
+					<li><a href='#home' data-icon='home'>Home</a></li>
+					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
+					<li><a href="#recentMem" class="ui-btn-active" data-icon='grid'>Recent</a></li>
+					<li><a href='#aboutUs' data-icon='info'>About Us</a></li>
+				</ul>
+			</div> <!-- End Navigation -->
+		</div> <!-- End Recent Memories -->
 		<!-- About Us -->
-		<div data-role-'page' id='aboutUs'>
+		<div data-role-'page' id='aboutUs' data-add-back-btn="true">
 			<!-- Header -->
 			<div data-role='header' data-position='fixed'>
-				<header>
-					<h1><a href='#home'>Memory Vault</a></h1>
-				</header>
+					<h1>Memory Vault</h1>
 			</div> <!-- End of header -->
 			<!-- Content -->
 			<div data-role='content'>
@@ -106,19 +136,16 @@
 				    </ul>
 				</div> <!-- End Credits -->
 			</div> <!-- End Content -->
-
-
 			<!-- Navigation -->
 			<div data-role='navbar' data-position='fixed'>
 				<ul>
 					<li><a href='#home' data-icon='home'>Home</a></li>
 					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
+					<li><a href="#recentMem" data-icon='grid'>Recent</a></li>
 					<li><a href='#aboutUs' class="ui-btn-active" data-icon='info'>About Us</a></li>
 				</ul>
 			</div> <!-- End Navigation -->
 		</div> <!-- End About us -->
-
-
 		<!-- Call jQueryMobile -->
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>

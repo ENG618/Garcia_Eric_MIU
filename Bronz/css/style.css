@@ -149,3 +149,10 @@ Project1
 		padding: 10px 0 10px 15px;
 
 	}
+
+	/* about.html specific style */
+	 .about li a {
+		text-decoration: none;
+	}
+	
+
