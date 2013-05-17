@@ -286,44 +286,44 @@ window.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-	// Create mood field element and populate with options
-	function creatMoodSearch(){
-		var formTag = document.getElementsByTagName('form'),
-			moodLi = gebid('addCategories'),
-			makeMood = document.createElement('select');
-			// Need to correct this element
-			makeMood.setAttribute('id', 'mood');
-		for (var i=0; i<eventMood.length; i++){
-			var makeOption = document.createElement('option');
-			var optText = eventMood[i];
-			makeOption.setAttribute('value', optText);
-			makeOption.innerHTML = optText;
-			makeMood.appendChild(makeOption);
-		}
-		moodLi.appendChild(makeMood);
-	} // End createMoodSearch
+	// // Create mood field element and populate with options
+	// function creatMoodSearch(){
+	// 	var formTag = document.getElementsByTagName('form'),
+	// 		moodLi = gebid('addCategories'),
+	// 		makeMood = document.createElement('select');
+	// 		// Need to correct this element
+	// 		makeMood.setAttribute('id', 'mood');
+	// 	for (var i=0; i<eventMood.length; i++){
+	// 		var makeOption = document.createElement('option');
+	// 		var optText = eventMood[i];
+	// 		makeOption.setAttribute('value', optText);
+	// 		makeOption.innerHTML = optText;
+	// 		makeMood.appendChild(makeOption);
+	// 	}
+	// 	moodLi.appendChild(makeMood);
+	// } // End createMoodSearch
 
 
-	// Search
-	var searchBtn = gebid('searchBtn');
-	var getMood = gebid('mood');
-	var searchField = gebid('searchField');
+	// // Search
+	// var searchBtn = gebid('searchBtn');
+	// var getMood = gebid('mood');
+	// var searchField = gebid('searchField');
 
-	// Search
-	function getSearch () {
-		// No selections
-		console.log(getMood.value);
-		if (getMood.value == '--Choose Mood--' && searchField.value === ""){
-			alert('Please enter a category or term to search.');
-		}
+	// // Search
+	// function getSearch () {
+	// 	// No selections
+	// 	console.log(getMood.value);
+	// 	if (getMood.value == '--Choose Mood--' && searchField.value === ""){
+	// 		alert('Please enter a category or term to search.');
+	// 	}
 
-		// Search by mood only
+	// 	// Search by mood only
 
-		// Search by text only
+	// 	// Search by text only
 
-		// Search by mood and text
+	// 	// Search by mood and text
 
-	} // End getSearch
+	// } // End getSearch
 
 	// Display/Clear data & Submit links
 	loadSavedData.addEventListener('click', loadData);

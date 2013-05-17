@@ -34,19 +34,13 @@
 			</div> <!-- End of header -->
 
 			<!-- Feature -->
-			<div data-role='content'>
-				<a href="addItem.html" data-ajax='false'><img src="img/MiU-CTA_rev4.jpg"></a>
+			<div data-role='content' data-inset='true'>
+					<a href="addItem.html" data-ajax='false'><img src="img/MiU-CTA_rev4.jpg"></a>
 			</div> <!-- End of Feature -->
-
-			<!-- Search -->
-			<div data-role='content'>
-				<input type="search" id="search" value="" placeholder="Search">
-				<!-- <input type='text' id=searchField><a href="search.html"><button type='button'>Search</button></a> -->
-			</div> <!-- End of Search -->
 			<!-- Browse Memories -->
 			<div data-role='content'>
 				<h2>Browse Memories by:</h2>
-				<ul class='browse' data-role='listview' data-inset='true'>
+				<ul class='browse' data-role='listview' data-filter="true" data-filter-placeholder="Search" data-inset="true">
 					<li><a href="search.html" data-ajax='false'>Occasion</a></li>
 					<li><a href="search.html" data-ajax='false'>Date</a></li>
 					<li><a href="search.html" data-ajax='false'>Importance</a></li>
@@ -54,10 +48,6 @@
 					<li><a href="search.html" data-ajax='false'>Shared With</a></li>
 				</ul>
 			</div><!-- End of Browse Memories -->
-			<!-- Footer -->
-			<div data-role='footer'>
-				<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
-			</div> <!-- End footer -->
 			<!-- Navigation -->
 			<div data-role='navbar' data-position='fixed'>
 				<ul>
@@ -73,22 +63,25 @@
 			<div data-role='header' data-position='fixed'>
 					<h1>Memory Vault</h1>
 			</div> <!-- End of header -->
-			<div>
+			<div data-role='content'>
 				<ul data-role="listview" data-inset="true">
-				    <li><a href="#">
-				        <img src="img/Memorable.png">
-				        <h2>Noah was born</h2>
-				        <p>Life changing</p></a>
-				    </li>
 				    <li><a href="#">
 				        <img src="img/Fun.png">
 				        <h2>Started School</h2>
+				        <p>October 25, 2012</p>
 				        <p>MDVBS is awesome!!</p></a>
 				    </li>
 				    <li><a href="#">
+				        <img src="img/Memorable.png">
+				        <h2>Noah was born</h2>
+				        <p>December 20, 2011</p>
+				        <p>Life changing</p></a>
+				    </li>
+				    <li><a href="#">
 				        <img src="img/Sad.png">
-				        <h2>Wolfgang Amadeus Phoenix</h2>
-				        <p>Phoenix</p></a>
+				        <h2>September 11th</h2>
+				        <p>September 11, 2001</p>
+				        <p>Unbelievable tragedy</p></a>
 				    </li>
 				</ul>
 				

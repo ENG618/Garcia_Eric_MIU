@@ -17,57 +17,136 @@
 		<!-- <meta name="viewport" content="target-densitydpi=device-dpi" /> -->
 		<!-- Page Title -->
 		<title>Memory Vault</title>
+		<!-- Call jQueryMobile css -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 		<!-- Call CSS File -->
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
-		<link href='font/roboto.css' rel='stylesheet' type='text/css' />
+		<!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href='font/roboto.css' rel='stylesheet' type='text/css' /> -->
 
 	</head>
 	<!-- body tag -->
 	<body>
-		<!-- Home Page -->
-		<div id='home'>
+		<!-- Home page -->
+		<div data-role='page' id='home'>
 			<!-- Header -->
-			<div>
-				<header>
-					<h1><a href='index.html'>Memory Vault</a></h1>
-				</header>
-			</div> <!-- End Header -->
-			<div>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="addItem.html">Add Item</a></li>
-						<li><a href="about.html">About Author</a></li>
-					</ul>
-				</nav>
-			</div>
+			<div data-role='header' data-position='fixed'>
+					<h1>Memory Vault</h1>
+			</div> <!-- End of header -->
 
 			<!-- Feature -->
-			<div>
-				<a href="additem.html"><img src="img/MiU-CTA_rev4.jpg"></a>
-			</div> <!-- End Feature -->
-			<!-- Search button -->
-			<div>
-<!-- 				<input type="search" name="password" id="search" value="" placeholder="Search">
- -->				<input type='search' id=searchField placeholder="Search"><a href="search.html"><button type='button' id='serchBtn'>Search</button></a>
-			</div> <!-- End Search -->
-			<!-- Browse Memories -->
-			<div>
-				<h2>Browse Memories by:</h2>
-				<ul class='browse'>
-					<li><a href="search.html">Occasion</a></li>
-					<li><a href="search.html">Date</a></li>
-					<li><a href="search.html">Importance</a></li>
-					<li><a href="search.html">Mood</a></li>
-					<li><a href="search.html">Shared With</a></li>
-				</ul>
-			</div><!-- End Browse Memories -->
-			<!-- Footer -->
-			<div>
-				<footer>Created by: <a href="https://plus.google.com/u/0/117454855184907306981/posts">Eric Garcia</a></footer>
-			</div> <!-- End footer -->
-		</div> <!-- End Home Page -->
+			<div data-role='content' data-inset='true'>
+					<a href="addItem.html" data-ajax='false'><img src="img/MiU-CTA_rev4.jpg"></a>
+			</div> <!-- End of Feature -->
 
+			<!-- Search -->
+			<div data-role='content'>
+				<input type="search" id="search" value="" placeholder="Search" data-fiter='ture'>
+			</div> <!-- End of Search -->
+			<!-- Browse Memories -->
+			<div data-role='content'>
+				<h2>Browse Memories by:</h2>
+				<ul class='browse' data-role='listview' data-inset="true">
+					<li><a href="search.html" data-ajax='false'>Occasion</a></li>
+					<li><a href="search.html" data-ajax='false'>Date</a></li>
+					<li><a href="search.html" data-ajax='false'>Importance</a></li>
+					<li><a href="search.html" data-ajax='false'>Mood</a></li>
+					<li><a href="search.html" data-ajax='false'>Shared With</a></li>
+				</ul>
+			</div><!-- End of Browse Memories -->
+			<!-- Navigation -->
+			<div data-role='navbar' data-position='fixed'>
+				<ul>
+					<li><a href='#home' class="ui-btn-active" data-icon='home'>Home</a></li>
+					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
+					<li><a href="#recentMem" data-icon='grid'>Recent</a></li>
+					<li><a href='#aboutUs' data-icon='info'>About Us</a></li>
+				</ul>
+			</div> <!-- End Navigation -->
+		</div> <!-- End Home -->
+		<!-- Recent Memories -->
+		<div data-role='page' id='recentMem' data-add-back-btn="true">
+			<div data-role='header' data-position='fixed'>
+					<h1>Memory Vault</h1>
+			</div> <!-- End of header -->
+			<div data-role='content'>
+				<ul data-role="listview" data-inset="true">
+				    <li><a href="#">
+				        <img src="img/Fun.png">
+				        <h2>Started School</h2>
+				        <p>October 25, 2012</p>
+				        <p>MDVBS is awesome!!</p></a>
+				    </li>
+				    <li><a href="#">
+				        <img src="img/Memorable.png">
+				        <h2>Noah was born</h2>
+				        <p>December 20, 2011</p>
+				        <p>Life changing</p></a>
+				    </li>
+				    <li><a href="#">
+				        <img src="img/Sad.png">
+				        <h2>September 11th</h2>
+				        <p>September 11, 2001</p>
+				        <p>Unbelievable tragedy</p></a>
+				    </li>
+				</ul>
+				
+			</div> <!-- End Contend -->
+			<!-- Navigation -->
+			<div data-role='navbar' data-position='fixed'>
+				<ul>
+					<li><a href='#home' data-icon='home'>Home</a></li>
+					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
+					<li><a href="#recentMem" class="ui-btn-active" data-icon='grid'>Recent</a></li>
+					<li><a href='#aboutUs' data-icon='info'>About Us</a></li>
+				</ul>
+			</div> <!-- End Navigation -->
+		</div> <!-- End Recent Memories -->
+		<!-- About Us -->
+		<div data-role-'page' id='aboutUs' data-add-back-btn="true">
+			<!-- Header -->
+			<div data-role='header' data-position='fixed'>
+					<h1>Memory Vault</h1>
+			</div> <!-- End of header -->
+			<!-- Content -->
+			<div data-role='content'>
+				<ul data-role="listview" data-inset="true">
+				    <li><a href="https://eng618.github.com/Garcia_Eric_MIU/Bronz" data-ajax='false'>Bronz gh-pages</a></li>
+				    <li><a href="https://eng618.github.com/Garcia_Eric_MIU/Gold" data-ajax='false'>Gold gh-pages</a></li>
+				    <li><a href="https://github.com/ENG618/Garcia_Eric_MIU" data-ajax='false'>Git Repo</a></li>
+				    <li><a href="http://eng618.github.io/Garcia_Eric_MIU/Bronz/" data-ajax='false'>Bronz App</a></li>
+				</ul>
+				<!-- About Author -->
+				<div data-role="collapsible" data-theme="b" data-content-theme="c">
+				    <h2>About the author</h2>
+				    <ul data-role="listview">
+				        <li><a href="https://plus.google.com/u/0/117454855184907306981/posts" data-ajax='false'>Google+</a></li>
+					    <li><a href="https://www.facebook.com/garciaericn" data-ajax='false'>Facebook</a></li>
+						<li><a href="https://twitter.com/NexusGenMods" data-ajax='false'>Twiter</a></li>
+				    </ul>
+				</div> <!-- End About Author -->
+				<!-- Credits -->
+				<div data-role="collapsible" data-theme="b" data-content-theme="c">
+				    <h2>Credits</h2>
+				    <ul data-role="listview">
+				        <li><a href="http://www.lynda.com/tutorial/100222?org=fullsail.edu" data-ajax='false'>Git Training</a></li>
+					    <li><a href="http://www.lynda.com/tutorial/81266?org=fullsail.edu" data-ajax='false'>js Training</a></li>
+						<li><a href="http://view.jquerymobile.com/1.3.1/dist/demos/" data-ajax='false'>jQuery Mobile</a></li>
+				    </ul>
+				</div> <!-- End Credits -->
+			</div> <!-- End Content -->
+			<!-- Navigation -->
+			<div data-role='navbar' data-position='fixed'>
+				<ul>
+					<li><a href='#home' data-icon='home'>Home</a></li>
+					<li><a href='addItem.html' data-icon='plus' data-ajax='false'>Add Memory</a></li>
+					<li><a href="#recentMem" data-icon='grid'>Recent</a></li>
+					<li><a href='#aboutUs' class="ui-btn-active" data-icon='info'>About Us</a></li>
+				</ul>
+			</div> <!-- End Navigation -->
+		</div> <!-- End About us -->
+		<!-- Call jQueryMobile -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 		<!-- Call js file -->
 	</body>
 </html>
