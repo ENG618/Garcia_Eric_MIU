@@ -1,6 +1,15 @@
 Git Hub Link:
-https://github.com/eng618
+
+	https://github.com/eng618
 
 Link to working gh-pages app:
-http://eng618.github.io/Garcia_Eric_MIU/Gold
-http://eng618.github.io/Garcia_Eric_MIU/Bronze
+
+	http://eng618.github.io/Garcia_Eric_MIU/Gold
+	http://eng618.github.io/Garcia_Eric_MIU/Bronze
+
+Meaningful Commits:
+
+	Week1: https://github.com/ENG618/Garcia_Eric_MIU/commit/bfb0bfacafc1bf194bb9a8b2d84922b857bc77bd
+	Week2: https://github.com/ENG618/Garcia_Eric_MIU/commit/53c6ccb7387042c8d58a05e4e88edaecd616b22b
+	Week3:
+	Week4:
