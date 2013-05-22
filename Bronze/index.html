@@ -13,7 +13,7 @@
 		<meta name="discription" content="My first web app using HTML5" />
 		<meta name="keyword" content="html5, web app, Full Sail, FVW" />
 		<meta name="robots" content="index, follow" />
-		<meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=divice-width, initial-scale=1.0, <!-- maximum-scale=1.0,  -->user-scalable=no" />
 		<!-- <meta name="viewport" content="target-densitydpi=device-dpi" /> -->
 		<!-- Page Title -->
 		<title>Memory Vault</title>
@@ -34,24 +34,26 @@
 			</div> <!-- End of header -->
 
 			<!-- Feature -->
-			<div data-role='content' data-inset='true'>
-					<a href="addItem.html" data-ajax='false'><img src="img/MiU-CTA_rev4.jpg"></a>
+			<div data-role='content'>
+					<a href='addItem.html' data-ajax='false' data-position='inset'><img src='img/MiU-CTA_rev5.jpg'></a>
 			</div> <!-- End of Feature -->
 
 			<!-- Search -->
 			<div data-role='content'>
-				<input type="search" id="search" value="" placeholder="Search" data-fiter='ture'>
+				<input type='search' id='search' value='' placeholder='Search' data-filter='true'>
 			</div> <!-- End of Search -->
 			<!-- Browse Memories -->
 			<div data-role='content'>
 				<h2>Browse Memories by:</h2>
 				<ul class='browse' data-role='listview' data-inset="true">
-					<li><a href="search.html" data-ajax='false'>Occasion</a></li>
-					<li><a href="search.html" data-ajax='false'>Date</a></li>
-					<li><a href="search.html" data-ajax='false'>Importance</a></li>
-					<li><a href="search.html" data-ajax='false'>Mood</a></li>
-					<li><a href="search.html" data-ajax='false'>Shared With</a></li>
-				</ul>
+					<div class="ui-grid-a">
+					    <div class='ui-block-a'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Occasion</a></div></div>
+					    <div class='ui-block-b'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Date</a></div></div>
+					    <div class='ui-block-a'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Importance</a></div></div>
+					    <div class='ui-block-b'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Mood</a></div></div>
+					    <div class='ui-block-a'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Shared With</a></div></div>
+					    <div class='ui-block-b'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Other</a></div></div>
+					</div><!-- End Browse grid -->
 			</div><!-- End of Browse Memories -->
 			<!-- Navigation -->
 			<div data-role='navbar' data-position='fixed'>
