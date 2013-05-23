@@ -4,7 +4,7 @@ $('#home').on('pageinit', function(){
 		
 $('#addItem').on('pageinit', function(){
 
-		var myForm = $('#formId');
+		var myForm = $('#newMemForm');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
 			},

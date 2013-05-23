@@ -36,7 +36,7 @@
 			<div data-role='content'>
 				<!-- Feature -->
 				<div>
-						<a href='#addItem' data-position='inset'><img src='img/MiU-CTA_rev5.jpg'></a>
+						<a href='#addItem' data-transition='slide'><img src='img/MiU-CTA_rev5.jpg'></a>
 				</div> <!-- End of Feature -->
 				<!-- Search -->
 				<div>
@@ -47,11 +47,11 @@
 					<h2>Browse Memories by:</h2>
 					<ul class='browse' data-role='listview' data-inset="true">
 						<div class="ui-grid-a">
-						    <div class="ui-block-a" class="ui-bar ui-bar-c">
-						    	Occasion
+						    <div class="ui-block-a">
+						    	<div class="ui-bar ui-bar-c"><a href="search.html" data-ajax="false">Occasion</a></div>
 						    </div>
-						    <div class="ui-block-b" class="ui-bar ui-bar-c">
-						    	<a href="search.html" data-ajax="false">Date</a>
+						    <div class="ui-block-b">
+						    	<div class="ui-bar ui-bar-c"><a href="search.html" data-ajax="false">Date</a></div>
 						    </div>
 						    <div class="ui-block-a">
 						    	<div class="ui-bar ui-bar-c"><a href="search.html" data-ajax="false">Importance</a></div>
@@ -158,28 +158,50 @@
 			</div> <!-- End of header -->
 			<div data-role='content' >
 				<!-- Grid -->
-				<div class='ui-grid-a' data-inset='true'>
-					<div class='ui-block-a' class="ui-bar ui-bar-c">
-							<a href="#"><img src="img/Fun.png">
+
+				<!-- <div class="ui-block-a">
+					<div class="ui-bar ui-bar-c"> 
+						<strong>Electronics</strong>
+						<a href="error.html" data-ajax="false"><img src="img/electronics.png"/></a>
+					</div>
+				</div> -->
+
+
+
+
+				<div class='ui-grid-a'>
+					<div class='ui-block-a'>
+						<div class="ui-bar ui-bar-c">
 					        <h2>Started School</h2>
-					        <p>October 25, 2012</p>
-					        <p>MDVBS is awesome!!</p></a>
+					        <a href="#"><img src="img/Fun.png">
+					        <!-- <p>October 25, 2012</p>
+					        <p>MDVBS is awesome!!</p> --></a><br/>
+					    </div>
 				    </div>
-					<div class='ui-block-b'><div class="ui-bar ui-bar-c">
-						<a href="#"><img src="img/Memorable.png">
-				        <h2>Noah was born</h2>
-				        <p>December 20, 2011</p>
-				        <p>Life changing</p></a></div></div>
-					<div class='ui-block-a'><div class="ui-bar ui-bar-c">
-						<a href="#"><img src="img/Fun.png">
-				        <h2>Graduated High School</h2>
-				        <p>May 24, 2005</p>
-				        <p>Had a blast!!!!!!</p></a></div></div>
-					<div class='ui-block-b'><div class="ui-bar ui-bar-c">
-						<a href="#"><img src="img/Sad.png">
-				        <h2>September 11th</h2>
-				        <p>September 11, 2001</p>
-				        <p>Unbelievable tragedy</p></a></div></div>
+					<div class='ui-block-b'>
+						<div class="ui-bar ui-bar-c">
+							<h2>Noah was born</h2>	
+							<a href="#"><img src="img/Memorable.png">
+					        <!-- <p>December 20, 2011</p>
+					        <p>Life changing</p> --></a>
+				    	</div>
+				    </div>
+					<div class='ui-block-a'>
+						<div class="ui-bar ui-bar-c">
+							<h2>Graduated High School</h2>
+							<a href="#"><img src="img/Fun.png">
+					        <!-- <p>May 24, 2005</p>
+					        <p>Had a blast!!!!!!</p> --></a><br/>
+				    	</div>
+				    </div>
+					<div class='ui-block-b'>
+						<div class="ui-bar ui-bar-c">
+							<h2>September 11th</h2>
+							<a href="#"><img src="img/Sad.png">
+					        <!-- <p>September 11, 2001</p>
+					        <p>Unbelievable tragedy</p> --></a><br/>
+					    </div>
+					</div>
 				</div> <!-- End of Grid -->
 			</div> <!-- End Contend -->
 			<!-- Navigation -->
