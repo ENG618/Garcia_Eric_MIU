@@ -34,33 +34,41 @@
 			</div> <!-- End of header -->
 			<!-- Feature -->
 			<div data-role='content'>
-					<a href='#addItem' data-position='inset'><img src='img/MiU-CTA_rev5.jpg'></a>
-			</div> <!-- End of Feature -->
-			<!-- Search -->
-			<div data-role='content'>
-				<input type='search' id='search' value='' placeholder='Search' data-filter='true'>
-			</div> <!-- End of Search -->
-			<!-- Browse Memories -->
-			<div data-role='content'>
-				<h2>Browse Memories by:</h2>
-				<ul class='browse' data-role='listview' data-inset="true">
-					<div class="ui-grid-a">
-					    <div class='ui-block-a'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Occasion</a></div></div>
-					    <div class='ui-block-b'><div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Date</a></div></div>
-					    <div class='ui-block-a'>
-					    	<div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Importance</a></div>
-					    </div>
-					    <div class='ui-block-b'>
-					    	<div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Mood</a></div>
-					    </div>
-					    <div class='ui-block-a'>
-					    	<div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Shared With</a></div>
-					    </div>
-					    <div class='ui-block-b'>
-					    	<div class='ui-bar ui-bar-c'><a href='search.html' data-ajax='false'>Other</a></div>
-					    </div>
-					</div><!-- End Browse grid -->
-			</div><!-- End of Browse Memories -->
+				<!-- Feature -->
+				<div>
+						<a href='#addItem' data-position='inset'><img src='img/MiU-CTA_rev5.jpg'></a>
+				</div> <!-- End of Feature -->
+				<!-- Search -->
+				<div>
+					<input type='search' id='search' value='' placeholder='Search' data-filter='true'>
+				</div> <!-- End of Search -->
+				<!-- Browse Memories -->
+				<div>
+					<h2>Browse Memories by:</h2>
+					<ul class='browse' data-role='listview' data-inset="true">
+						<div class="ui-grid-a">
+						    <div class="ui-block-a" class="ui-bar ui-bar-c">
+						    	Occasion
+						    </div>
+						    <div class="ui-block-b" class="ui-bar ui-bar-c">
+						    	<a href="search.html" data-ajax="false">Date</a>
+						    </div>
+						    <div class="ui-block-a">
+						    	<div class="ui-bar ui-bar-c"><a href="search.html" data-ajax="false">Importance</a></div>
+						    </div>
+						    <div class="ui-block-b">
+						    	<div class="ui-bar ui-bar-c"><a href="search.html" data-ajax="false">Mood</a></div>
+						    </div>
+						    <div class="ui-block-a">
+						    	<div class="ui-bar ui-bar-c"><a href="search.html" data-ajax="false">Shared With</a></div>
+						    </div>
+						    <div class="ui-block-b">
+						    	<div class="ui-bar ui-bar-c"><a href="search.html" data-ajax="false">Other</a></div>
+						    </div>
+						</div><!-- End Browse grid -->
+					</ul>
+				</div><!-- End of Browse Memories -->
+			</div>
 			<!-- Navigation -->
 			<div data-role='navbar' data-position='fixed' data-id='nav'>
 				<ul>
@@ -78,7 +86,6 @@
 			<div data-role='header' data-position='fixed'>
 					<h1>Add Memory</h1>
 			</div> <!-- End of header -->
-
 
 			<div data-role='content'>
 				<!-- Form -->
@@ -133,9 +140,8 @@
 					<div data-role='fieldcontain'>
 						<input type='reset' value='Reset form' data-theme='a'>
 					</div>
-				</form>
-				<!-- End Form -->
-			</div>
+				</form> <!-- End Form -->
+			</div> <!-- End Content -->
 			<!-- Navigation -->
 			<div data-role='navbar' data-position='fixed' data-id='nav'>
 				<ul>
@@ -153,11 +159,12 @@
 			<div data-role='content' >
 				<!-- Grid -->
 				<div class='ui-grid-a' data-inset='true'>
-					<div class='ui-block-a'><div class="ui-bar ui-bar-c">
-						<a href="#"><img src="img/Fun.png">
-				        <h2>Started School</h2>
-				        <p>October 25, 2012</p>
-				        <p>MDVBS is awesome!!</p></a></div></div>
+					<div class='ui-block-a' class="ui-bar ui-bar-c">
+							<a href="#"><img src="img/Fun.png">
+					        <h2>Started School</h2>
+					        <p>October 25, 2012</p>
+					        <p>MDVBS is awesome!!</p></a>
+				    </div>
 					<div class='ui-block-b'><div class="ui-bar ui-bar-c">
 						<a href="#"><img src="img/Memorable.png">
 				        <h2>Noah was born</h2>
