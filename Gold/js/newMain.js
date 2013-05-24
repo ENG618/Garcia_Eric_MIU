@@ -8,12 +8,21 @@ $('#home').on('pageinit', function(){
 });
 
 	$('#addItem').on('pageinit', function(){
-	// $(document).ready(function(){
+
 		var myForm = $('#newMemForm'),
-			errorLink = $('errorLink');
+			errorLink = $('#errorLink');
+
 		myForm.validate({
 			invalidHandler: function(form, validator) {
 				errorLink.click();
+				html = '';
+				for(key in validator.submitted){
+					var label = $('label[for^="'+ key +'"]').not('[generated]');
+					var legend = label.closest('fildset').find('.ui-controlgroup-lable');
+					var fieldName = legend.length ? legend.text() : label.text();
+					html += '<li>'+ fieldName +'</li>';
+				}
+				$("#errorLink ul").html(html);
 			},
 			submitHandler: function() {
 				var data = myForm.serializeArray();
