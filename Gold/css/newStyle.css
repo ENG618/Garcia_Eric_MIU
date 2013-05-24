@@ -1,0 +1,15 @@
+/*	Eric Garcia
+	MIU 1305
+	Project 3
+*/
+
+
+.error {
+	display: block;
+	margin: 10px 0;
+	color: red;
+}
+
+#errorLink {
+	display: none;
+}
