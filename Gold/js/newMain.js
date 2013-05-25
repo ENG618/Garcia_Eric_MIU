@@ -1,6 +1,7 @@
 // Eric Garcia
 // MIU 1305
-// Project 3
+// Project 4
+// Gold app
 
 
 $('#home').on('pageinit', function(){

@@ -1,6 +1,7 @@
 // Eric Garcia
 // MIU 1305
 // Project 1
+// Gold app
 
 window.addEventListener('DOMContentLoaded', function(){
 
