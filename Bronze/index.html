@@ -71,7 +71,7 @@
 				</div><!-- /Browse Memories -->
 			</div>
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed" data-id="nav">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" class="ui-btn-active ui-state-persist" data-icon="home" data-transition="slide">Home</a></li>
 					<li><a href="#addItem" data-icon="plus" data-transition="slide">Add Memory</a></li>
@@ -88,76 +88,80 @@
 			<div data-role="header" data-position="fixed">
 					<h1>Add Memory</h1>
 			</div> <!-- /Header -->
-
+			<!-- Content -->
 			<div data-role="content">
 				<!-- Form -->
 				<form action="" method="post" id="newMemForm">
-					<!-- Occasion -->
-					<div data-role="fieldcontain">
-						<label for="occasion">Occasion</label>
-						<input type="text" name="occasion " id="occasion" title="The name of the event goes here" placeholder="Name of event" class="required" />
-					</div><!-- /Occasion -->
-					<!-- Date -->
-					<div data-role=fieldcontain>
-						<label for=date>Date</label>
-						<input type=date name=date id=date class="date required" />
-						<!-- <p>Date format goes here</p> -->
-					</div><!-- /Date -->
-					<!-- Importance -->
-					<div data-role="fieldcontain">
-						<label for="importance">Importance (Scale of 1-10)</label>
-						<input type="range" name="importance" id="importance" value=5 min=1 max=10 />
-					</div><!-- /Importance -->
-					<!-- Mood -->
-					<div data-role="fieldcontain">
-						<label for="mood">Mood of even</label>
-						<select name="mood" id="mood" data-native-menu="false" class="required">
-							<option value="">--Choose Mood--</option>
-							<option value="fun">Fun</option>
-							<option value="memorable">Memorable</option>
-							<option vlaue="sad">Sad</option>
-						</select>
-					</div><!-- /Mood -->
-					<!-- Shared With -->
-					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup">
-							<legend>Shared With</legend>
-							<label for="family">Family</label>
-							<input type="checkbox" value="Family" id="family" name="sharedWith" class="required" />
-							<label for="significantOther">Significant other</label>
-							<input type="checkbox" value="Significant other" id="significantOther" name="sharedWith" />
-							<label for="friends">Friends</label>
-							<input type="checkbox" value="Friends" id="friends" name="sharedWith" />
-							<label for="co-workers">Co-workers</label>
-							<input type="checkbox" value="Co-workers" id="co-workers" name="sharedWith" />
-							<label for="self">Self</label>
-							<input type="checkbox" value="Self" id=self name="sharedWith" checked />
-							<label for="other">Other</label>
-							<input type="checkbox" value="Other" id="other" name="sharedWith" />
-						</fieldset>
-					</div><!-- /Shared With -->
-					<!-- Notes -->
-					<div data-role="fieldcontain">
-						<label for="notes">Notes</label>
-						<textarea name="notes" id="notes" placeholder="Describe this occasion here..."></textarea>
-					</div><!-- /Notes -->
-					<!-- Submit Button -->
-					<div data-role="fieldcontain">
-						<input type="submit" value="Save memory" data-theme="b">
-					</div><!-- /Submit Button -->
-					<!-- Reset Button -->
-					<div data-role="fieldcontain">
-						<input type="reset" value="Reset form" data-theme="a">
-					</div><!-- /Reset Button -->
-					<a href="#addItemErrors" id="errorLink" data-rel="dialog" data-transition="pop">Errors</a>
+					<!-- Form Elements -->
+					<ul data-role="listview" data-inset="true">
+						<!-- Occasion -->
+						<li data-role="fieldcontain">
+							<label for="occasion">Occasion</label>
+							<input type="text" name="occasion" id="occasion" title="The name of the event goes here" placeholder="Name of event" class="required" />
+						</li><!-- /Occasion -->
+							<!-- Date -->
+						<li data-role=fieldcontain>
+							<label for=date>Date</label>
+							<input type=date name=date id=date class="date required" placeholder="yyyy/mm/dd" />
+							<!-- <p>Date format goes here</p> -->
+						</li><!-- /Date -->
+						<!-- Importance -->
+						<li data-role="fieldcontain">
+							<label for="importance">Importance (Scale of 1-10)</label>
+							<input type="range" name="importance" id="importance" value=5 min=1 max=10 />
+						</li><!-- /Importance -->
+						<!-- Mood -->
+						<li data-role="fieldcontain">
+							<label for="mood">Mood of even</label>
+							<select name="mood" id="mood" data-native-menu="false" class="required">
+								<option value="">--Choose Mood--</option>
+								<option value="fun">Fun</option>
+								<option value="memorable">Memorable</option>
+								<option vlaue="sad">Sad</option>
+							</select>
+						</li><!-- /Mood -->
+						<!-- Shared With -->
+						<li data-role="fieldcontain">
+							<fieldset data-role="controlgroup">
+								<legend>Shared With</legend>
+								<label for="family">Family</label>
+								<input type="checkbox" value="Family" id="family" name="sharedWith" class="required" />
+								<label for="significantOther">Significant other</label>
+								<input type="checkbox" value="Significant other" id="significantOther" name="sharedWith" />
+								<label for="friends">Friends</label>
+								<input type="checkbox" value="Friends" id="friends" name="sharedWith" />
+								<label for="co-workers">Co-workers</label>
+								<input type="checkbox" value="Co-workers" id="co-workers" name="sharedWith" />
+								<label for="self">Self</label>
+								<input type="checkbox" value="Self" id=self name="sharedWith" checked />
+								<label for="other">Other</label>
+								<input type="checkbox" value="Other" id="other" name="sharedWith" />
+							</fieldset>
+						</li><!-- /Shared With -->
+						<!-- Notes -->
+						<li data-role="fieldcontain">
+							<label for="notes">Notes</label>
+							<textarea name="notes" id="notes" placeholder="Describe this occasion here..."></textarea>
+						</li><!-- /Notes -->
+						<!-- Submit Buttons -->
+						<li data-role="fieldcontian">
+							<div><input type="submit" value="Save memory" data-icon="check" data-iconpos="right" data-theme="b"></div>
+						</li><!-- /Submit Button -->
+					</ul><!-- /Form Elements -->
 				</form> <!-- /Form -->
+				<!-- Reset Buttons -->
+				<div data-role="fieldcontian">
+					<div><input type="reset" data-mini="true" value="Reset form" data-icon="delete" data-iconpos="right" data-theme="a"></div>
+				</div><!-- /Reset Button -->
+				<a href="#addItemErrors" id="errorLink" data-rel="dialog" data-transition="pop">Errors</a>
+	
 			</div> <!-- /Content -->
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed" data-id="nav">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="#addItem" class="ui-btn-active ui-state-persist" data-icon="plus" data-transition="slide">Add Memory</a></li>
-					<li><a href="#recentMem" data-icon="grid" data-transition="slide">Recent</a></li>
+					<li><a href="#addItem" class="ui-btn-active ui-state-persist" data-icon="plus" data-transition="slide">Memory</a></li>
+					<li><a href="#recentMem" data-icon="bars" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>
 			</div> <!-- /Navigation -->
@@ -207,7 +211,7 @@
 				</div> <!-- /Grid -->
 			</div> <!-- /Contend -->
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed" data-id="nav">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
 					<li><a href="#addItem" data-icon="plus" data-ajax="false" data-transition="slide">Add Memory</a></li>
@@ -255,7 +259,7 @@
 				</div><!-- /Collapsible Set -->
 			</div> <!-- /Content -->
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed" data-id="nav">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
 					<li><a href="#addItem" data-icon="plus" data-transition="slide">Add Memory</a></li>

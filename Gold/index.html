@@ -56,11 +56,11 @@
 				</div><!-- /Browse Memories -->
 			</div>
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" class="ui-btn-active ui-state-persist" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="#addItem" data-icon="plus" data-transition="slide">Add Memory</a></li>
-					<li><a href="#recentMem" data-icon="grid" data-transition="slide">Recent</a></li>
+					<li><a href="#addItem" data-icon="plus" data-transition="slide">Memory</a></li>
+					<li><a href="#recentMem" data-icon="bars" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>
 			</div> <!-- /Navigation -->
@@ -73,78 +73,82 @@
 			<div data-role="header" data-position="fixed">
 					<h1>Add Memory</h1>
 			</div> <!-- /Header -->
-
+			<!-- Content -->
 			<div data-role="content">
+				<p>* required fields</p>
 				<!-- Form -->
 				<form action="" method="post" id="newMemForm">
-					<!-- Occasion -->
-					<div data-role="fieldcontain">
-						<label for="occasion">Occasion</label>
-						<input type="text" name="occasion " id="occasion" title="The name of the event goes here" placeholder="Name of event" class="required" />
-					</div><!-- /Occasion -->
-					<!-- Date -->
-					<div data-role=fieldcontain>
-						<label for=date>Date</label>
-						<input type=date name=date id=date class="date required" />
-						<!-- <p>Date format goes here</p> -->
-					</div><!-- /Date -->
-					<!-- Importance -->
-					<div data-role="fieldcontain">
-						<label for="importance">Importance (Scale of 1-10)</label>
-						<input type="range" name="importance" id="importance" value=5 min=1 max=10 />
-					</div><!-- /Importance -->
-					<!-- Mood -->
-					<div data-role="fieldcontain">
-						<label for="mood">Mood of even</label>
-						<select name="mood" id="mood" data-native-menu="false" class="required">
-							<option value="">--Choose Mood--</option>
-							<option value="fun">Fun</option>
-							<option value="memorable">Memorable</option>
-							<option vlaue="sad">Sad</option>
-						</select>
-					</div><!-- /Mood -->
-					<!-- Shared With -->
-					<div data-role="fieldcontain">
-						<fieldset data-role="controlgroup">
-							<legend>Shared With</legend>
-							<label for="family">Family</label>
-							<input type="checkbox" value="Family" id="family" name="sharedWith" class="required" />
-							<label for="significantOther">Significant other</label>
-							<input type="checkbox" value="Significant other" id="significantOther" name="sharedWith" />
-							<label for="friends">Friends</label>
-							<input type="checkbox" value="Friends" id="friends" name="sharedWith" />
-							<label for="co-workers">Co-workers</label>
-							<input type="checkbox" value="Co-workers" id="co-workers" name="sharedWith" />
-							<label for="self">Self</label>
-							<input type="checkbox" value="Self" id=self name="sharedWith" checked />
-							<label for="other">Other</label>
-							<input type="checkbox" value="Other" id="other" name="sharedWith" />
-						</fieldset>
-					</div><!-- /Shared With -->
-					<!-- Notes -->
-					<div data-role="fieldcontain">
-						<label for="notes">Notes</label>
-						<textarea name="notes" id="notes" placeholder="Describe this occasion here..."></textarea>
-					</div><!-- /Notes -->
-					<!-- Submit & Reset Buttons -->
-					<div data-role="fieldcontain">
-						<!-- Bottons Grid -->
-						<div method="get" actions="">
-							<div class='ui-grid-a'>
-								<div class="ui-block-a"><input type="submit" value="Save memory" data-theme="b"></div>
-								<div class="ui-block-b"><input type="reset" value="Reset form" data-theme="a"></div>
-							</div>
-						</div><!-- /Buttons Grid -->
-					</div><!-- /Submit & Reset Buttons -->
+					<!-- Form Elements -->
+					<ul data-role="listview" data-inset="true" id="ulForm">
+						<!-- Occasion -->
+						<li data-role="fieldcontain">
+							<label for="occasion">Occasion*</label>
+							<input type="text" name="occasion" id="occasion" title="The name of the event goes here" placeholder="Name of event" class="required" />
+						</li><!-- /Occasion -->
+						<!-- Date -->
+						<li data-role=fieldcontain>
+							<label for=date>Date*</label>
+							<input type=date name=date id=date class="date required" />
+							<!-- <p>Date format goes here</p> -->
+						</li><!-- /Date -->
+						<!-- Important -->
+						<li data-role="fieldcontain">
+				            <label for="importance">Important</label>
+				            <select data-role="slider" name="importance" title='Was this event important?' id="importance">
+				                <option value="no">No</option>
+				                <option value="yes">Yes</option>
+				            </select>
+				        </li><!-- /Important -->
+						<!-- Mood -->
+						<li data-role="fieldcontain">
+							<label for="mood">Mood of even*</label>
+							<select name="mood" id="mood" data-native-menu="false" title="Set the mood of the event" class="required">
+								<option value="">--Choose Mood--</option>
+								<option value="fun">Fun</option>
+								<option value="memorable">Memorable</option>
+								<option vlaue="sad">Sad</option>
+							</select>
+						</li><!-- /Mood -->
+						<!-- Shared With -->
+						<li data-role="fieldcontain">
+							<fieldset data-role="controlgroup">
+								<legend>Shared With*</legend>
+								<label for="family">Family</label>
+								<input type="checkbox" value="Family" id="family" name="sharedWith" class="required" />
+								<label for="significantOther">Significant other</label>
+								<input type="checkbox" value="Significant other" id="significantOther" name="sharedWith" />
+								<label for="friends">Friends</label>
+								<input type="checkbox" value="Friends" id="friends" name="sharedWith" />
+								<label for="co-workers">Co-workers</label>
+								<input type="checkbox" value="Co-workers" id="co-workers" name="sharedWith" />
+								<label for="self">Self</label>
+								<input type="checkbox" value="Self" id=self name="sharedWith" checked />
+								<label for="other">Other</label>
+								<input type="checkbox" value="Other" id="other" name="sharedWith" />
+							</fieldset>
+						</li><!-- /Shared With -->
+						<!-- Notes -->
+						<li data-role="fieldcontain">
+							<label for="notes">Notes</label>
+							<textarea name="notes" id="notes" placeholder="Describe this occasion here..."></textarea>
+						</li><!-- /Notes -->
+						<!-- Submit Buttons -->
+						<li data-role="fieldcontian">
+							<div><input type="submit" value="Save memory" data-icon="check" data-iconpos="right" data-theme="b"></div>
+						</li><!-- /Submit Button -->
+						<li data-role="fieldcontian">
+							<div><input type="reset" data-mini="true" value="Reset form" data-icon="delete" data-iconpos="right" data-theme="a"></div>
+						</li><!-- /Reset Button -->
+					</ul><!-- /Form Elements -->
 					<a href="#addItemErrors" id="errorLink" data-rel="dialog" data-transition="pop">Errors</a>
 				</form> <!-- /Form -->
 			</div> <!-- /Content -->
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed" data-id="nav">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="#addItem" class="ui-btn-active ui-state-persist" data-icon="plus" data-transition="slide">Add Memory</a></li>
-					<li><a href="#recentMem" data-icon="grid" data-transition="slide">Recent</a></li>
+					<li><a href="#addItem" class="ui-btn-active ui-state-persist" data-icon="plus" data-transition="slide">Memory</a></li>
+					<li><a href="#recentMem" data-icon="bars" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>
 			</div> <!-- /Navigation -->
@@ -153,45 +157,62 @@
 
 		<!-- Recent Memories -->
 		<div data-role="page" id="recentMem" data-add-back-btn="true">
+			<!-- Header -->
 			<div data-role="header" data-position="fixed">
 					<h1>Memory Vault</h1>
 			</div> <!-- /Header -->
+			<!-- Page content -->
 			<div data-role="content">
-				<ul data-role="listview" data-inset="true">
-				    <li><a href="#">
+				<!-- Control Group -->
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href='#' id='clearSavedData' data-role="button">Erase All Memories</a>
+				</div><!-- /Control Group -->
+				<h2>Tap memory to edit</h2>
+				<!-- List of Memories -->
+				<ul data-role="listview" data-split-icon="delete" id="recentMemList" data-inset="true" data-filter="true" data-filter-placeholder="Search memories...">
+				    <li><a href="#" data-icon="edit">
 				        <img src="img/Fun.png">
 				        <h2>Started School</h2>
 				        <p>October 25, 2012</p>
 				        <p>MDVBS is awesome!!</p></a>
+				        <a href="#deleteMem" data-rel="popup" data-position-to="window" data-transition="pop">Delete Memory</a>
 				    </li>
 				    <li><a href="#">
 				        <img src="img/Memorable.png">
 				        <h2>Noah was born</h2>
 				        <p>December 20, 2011</p>
 				        <p>Life changing</p></a>
+				        <a href="#deleteMem" data-rel="popup" data-position-to="window" data-transition="pop">Delete Memory</a>
 				    </li>
 				    <li><a href="#">
 				        <img src="img/Fun.png">
 				        <h2>Graduated High School</h2>
 				        <p>May 24, 2005</p>
 				        <p>Had a blast!!!!!!</p></a>
+				        <a href="#deleteMem" data-rel="popup" data-position-to="window" data-transition="pop">Delete Memory</a>
 				    </li>
 				    <li><a href="#">
 				        <img src="img/Sad.png">
 				        <h2>September 11th</h2>
 				        <p>September 11, 2001</p>
 				        <p>Unbelievable tragedy</p></a>
+				        <a href="#deleteMem" data-rel="popup" data-position-to="window" data-transition="pop">Delete Memory</a>
 				    </li>
-
-				</ul>
-				
+				</ul><!-- /List of Memories -->
+				<!-- Delete Individual Memory Button -->
+				<div data-role="popup" id="deleteMem" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+				    <h3>Delete Memory?</h3>
+				    <p>This will completely remove this memory?</p>
+				    <a href="#recentMem" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true">Delete Memory</a>
+				    <a href="#recentMem" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a>
+				</div><!-- /Delete Individual Memory Button -->
 			</div> <!-- /Contend -->
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="#addItem" data-icon="plus" data-transition="slide">Add Memory</a></li>
-					<li><a href="#recentMem" class="ui-btn-active ui-state-persist" data-icon="grid" data-transition="slide">Recent</a></li>
+					<li><a href="#addItem" data-icon="plus" data-transition="slide">Memory</a></li>
+					<li><a href="#recentMem" class="ui-btn-active ui-state-persist" data-icon="bars" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>
 			</div> <!-- /Navigation -->
@@ -216,7 +237,7 @@
 				<div data-role="collapsible-set">
 					<!-- About Author -->
 					<div data-role="collapsible" data-theme="b" data-content-theme="c" >
-					    <h2>About the author</h2>
+					    <h2>Find me on</h2>
 					    <ul data-role="listview">
 					        <li><a href="https://plus.google.com/u/0/117454855184907306981/posts" data-ajax='false'>Google+</a></li>
 						    <li><a href="https://www.facebook.com/garciaericn" data-ajax='false'>Facebook</a></li>
@@ -235,11 +256,11 @@
 				</div><!-- /Collapsible Set -->
 			</div> <!-- /Content -->
 			<!-- Navigation -->
-			<div data-role="navbar" data-position="fixed">
+			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="addItem.html" data-icon="plus" data-ajax="false" data-transition="slide">Add Memory</a></li>
-					<li><a href="#recentMem" data-icon="grid" data-transition="slide">Recent</a></li>
+					<li><a href="#addItem" data-icon="plus" data-transition="slide">Memory</a></li>
+					<li><a href="#recentMem" data-icon="bars" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" class="ui-btn-active ui-state-persist" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>
 			</div> <!-- /Navigation -->
