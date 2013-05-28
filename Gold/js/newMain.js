@@ -3,20 +3,22 @@
 // Project 4
 // Gold app
 
+// var currentTime = new Date();
+// $("#date").val(currentTime);
 
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });
-
-var currentTime = new Date();
-
-$("#date").value(currentTime);
 
 $('#addItem').on('pageinit', function(){
 
 	var myForm = $('#newMemForm'),
 		errorLink = $('#errorLink'),
 		currentTime = new Date();
+
+	console.log(currentTime);
+
+	$("input[type=date]").val(currentTime);
 
 	myForm.validate({
 		invalidHandler: function(form, validator) {
@@ -32,12 +34,11 @@ $('#addItem').on('pageinit', function(){
 		},
 		submitHandler: function() {
 			var data = myForm.serializeArray();
-			console.log(data)
+			console.log(data);
 			storeData(data);
 		}
 	});
 
-// $("#date").value(currentTime);
 //any other code needed for addItem page goes here
 
 });
@@ -45,8 +46,7 @@ $('#addItem').on('pageinit', function(){
 // 
 $('#recentMem').on('pageinit', function(){
 	//code needed for recentMem page goes here
-	
-};
+
 });
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
@@ -74,6 +74,7 @@ var storeData = function(data){
 		// Save data to local Storage
 		localStorage.setItem(id, JSON.stringify(memory));
 		alert('Your memory is safe!!');
+	};
 };
 
 var	deleteItem = function (){
