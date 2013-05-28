@@ -10,17 +10,20 @@ $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });
 
+// #addItem page ready function
 $('#addItem').on('pageinit', function(){
-
+	// var decloration for #addItem
 	var myForm = $('#newMemForm'),
 		errorLink = $('#errorLink'),
 		currentTime = new Date();
-
+	// Trying to get current date as default
 	console.log(currentTime);
 
 	$("input[type=date]").val(currentTime);
-
+	// End: current date as default
+	// Form validation
 	myForm.validate({
+		// invalidHandler funciton
 		invalidHandler: function(form, validator) {
 			errorLink.click();
 			html = '';
@@ -29,19 +32,20 @@ $('#addItem').on('pageinit', function(){
 				var legend = label.closest('fildset').find('.ui-controlgroup-lable');
 				var fieldName = legend.length ? legend.text() : label.text();
 				html += '<li>'+ fieldName +'</li>';
-			}
+			} // End: for in loop
 			$("#errorLink ul").html(html);
-		},
+		}, // End: invalidHandler function
+		// submitHandler function
 		submitHandler: function() {
 			var data = myForm.serializeArray();
 			console.log(data);
 			storeData(data);
-		}
-	});
+		} // End: submitHandler function
+	}); // End: Form validation
 
 //any other code needed for addItem page goes here
 
-});
+}); // End: #addItem page ready function
 
 // 
 $('#recentMem').on('pageinit', function(){
