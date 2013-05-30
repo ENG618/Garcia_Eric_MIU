@@ -3,24 +3,19 @@
 // Project 4
 // Gold app
 
-// var currentTime = new Date();
-// $("#date").val(currentTime);
-
+// #home page ready function
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
-});
+}); // End: #home page ready function
 
 // #addItem page ready function
-$('#addItem').on('pageinit', function(){
+// $('#addItem').on('pageinit', function(){
+	$(document).ready(function(){
 	// var decloration for #addItem
 	var myForm = $('#newMemForm'),
-		errorLink = $('#errorLink'),
-		currentTime = new Date();
-	// Trying to get current date as default
-	console.log(currentTime);
+		errorLink = $('#errorLink');
+		// End: var decloration
 
-	$("input[type=date]").val(currentTime);
-	// End: current date as default
 	// Form validation
 	myForm.validate({
 		// invalidHandler funciton
@@ -62,19 +57,19 @@ var autofillData = function (){
 var getData = function(){
 	console.log(data);
 
-var storeData = function(data){
+var storeData = function(data, key){
 		if(!key){
 			var id	= Math.floor(Math.random()*12345678);
 		}else{
 			id = key;
 		}
 		var memory = {};
-		memory.occasion = ['Occasion: ', gebid('occasion').value];
-		memory.date = ['Date: ', gebid('date').value];
-		memory.importance = ['Importance: ', gebid('importance').value];
-		memory.eventMood = ['Mood: ', gebid('mood').value];
+		memory.occasion = ['Occasion: ', $('#occasion').val()];
+		memory.date = ['Date: ', $('#date').val()];
+		memory.importance = ['Importance: ', $('#importance').val()];
+		memory.eventMood = ['Mood: ', $('#mood').value];
 		memory.including = ['Shared With: ', getCheckedValues()];
-		memory.notes = ['Notes: ', gebid('notes').value];
+		memory.notes = ['Notes: ', $('#notes').val()];
 		// Save data to local Storage
 		localStorage.setItem(id, JSON.stringify(memory));
 		alert('Your memory is safe!!');
