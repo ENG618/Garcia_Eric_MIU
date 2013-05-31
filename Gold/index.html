@@ -16,15 +16,11 @@
 		<!-- <meta name="viewport" content="target-densitydpi=device-dpi" /> -->
 		<!-- Page Title -->
 		<title>Memory Vault</title>
+		<!-- Call jQueryMobile css -->
 		<link rel="stylesheet" href="css/themes/mintMemory_Gold.min.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
-		<!-- Call jQueryMobile css -->
-		<!-- <link rel="stylesheet" href="css/themes/mintMemory_Gold.css" /> -->
-		<!-- <link rel="stylesheet" href="jqm.structure-1.3.1.min.css" /> -->
-		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> -->
 		<!-- Call CSS File -->
 		<link href="css/newStyle.css" rel="stylesheet" type="text/css" />
-		<!-- <link href='font/roboto.css' rel='stylesheet' type='text/css' /> -->
 
 	</head>
 	<!-- body tag -->
@@ -35,12 +31,12 @@
 		<div data-role="page" id="home" data-theme="c">
 			<!-- Header -->
 			<div data-role="header" data-position="fixed" data-theme="b">
-					<h1>Memory Vault</h1>
+					<h1><img src="img/Memory-Vault-logo_rev1.png"></h1>
 			</div> <!-- /Header -->
 			<div data-role="content">
 				<!-- Feature -->
 				<div data-inset="true">
-						<a href="#addItem" data-transition="slide"><img src="img/MiU-CTA_rev5.jpg"></a>
+						<a href="#addItem" data-transition="slide"><img src="img/MiU-CTA_rev6.jpg"></a>
 				</div> <!-- /Feature -->
 
 				<!-- Search -->
@@ -75,7 +71,7 @@
 		<div data-role="page" id="addItem" data-add-back-btn="true" data-theme="c">
 			<!-- Header -->
 			<div data-role="header" data-position="fixed" data-theme="c">
-					<h1>Add Memory</h1>
+					<h1><img src="img/Memory-Vault-logo_rev1.png"></h1>
 			</div> <!-- /Header -->
 			<!-- Content -->
 			<div data-role="content">
@@ -114,7 +110,7 @@
 							</select>
 						</li><!-- /Mood -->
 						<!-- Shared With -->
-						<li data-role="fieldcontain">
+						<li data-role="fieldcontain" id="checkboxes">
 							<fieldset data-role="controlgroup">
 								<legend>Shared With*</legend>
 								<label for="family">Family</label>
@@ -163,7 +159,7 @@
 		<div data-role="page" id="recentMem" data-add-back-btn="true">
 			<!-- Header -->
 			<div data-role="header" data-position="fixed" data-theme="c">
-					<h1>Memory Vault</h1>
+					<h1><img src="img/Memory-Vault-logo_rev1.png"></h1>
 			</div> <!-- /Header -->
 			<!-- Page content -->
 			<div data-role="content">
@@ -174,28 +170,28 @@
 				<h2>Tap memory to edit</h2>
 				<!-- List of Memories -->
 				<ul data-role="listview" data-split-icon="delete" id="recentMemList" data-inset="true" data-filter="true" data-filter-placeholder="Search memories...">
-				    <li><a href="#" data-icon="edit">
+				    <li><a href="#addItem" data-transition="slide" data-icon="edit">
 				        <img src="img/Fun.png">
 				        <h2>Started School</h2>
 				        <p>October 25, 2012</p>
 				        <p>MDVBS is awesome!!</p></a>
 				        <a href="#deleteMem" data-rel="popup" data-position-to="window" data-transition="pop">Delete Memory</a>
 				    </li>
-				    <li><a href="#">
+				    <li><a href="#addItem" data-transition="slide">
 				        <img src="img/Memorable.png">
 				        <h2>Noah was born</h2>
 				        <p>December 20, 2011</p>
 				        <p>Life changing</p></a>
 				        <a href="#deleteMem" data-rel="popup" data-position-to="window" data-transition="pop">Delete Memory</a>
 				    </li>
-				    <li><a href="#">
+				    <li><a href="#addItem" data-transition="slide">
 				        <img src="img/Fun.png">
 				        <h2>Graduated High School</h2>
 				        <p>May 24, 2005</p>
 				        <p>Had a blast!!!!!!</p></a>
 				        <a href="#deleteMem" data-rel="popup" data-position-to="window" data-transition="pop">Delete Memory</a>
 				    </li>
-				    <li><a href="#">
+				    <li><a href="#addItem" data-transition="slide">
 				        <img src="img/Sad.png">
 				        <h2>September 11th</h2>
 				        <p>September 11, 2001</p>
@@ -227,7 +223,7 @@
 		<div data-role-"page" id="aboutUs" data-add-back-btn="true">
 			<!-- Header -->
 			<div data-role="header" data-position="fixed" data-theme="c">
-					<h1>Memory Vault</h1>
+					<h1><img src="img/Memory-Vault-logo_rev1.png"></h1>
 			</div> <!-- /Header -->
 			<!-- Content -->
 			<div data-role="content">

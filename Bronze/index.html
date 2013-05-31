@@ -17,7 +17,8 @@
 		<!-- Page Title -->
 		<title>Memory Vault</title>
 		<!-- Call jQueryMobile css -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<link rel="stylesheet" href="css/themes/mintMemory_Bronze.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
 		<!-- Call CSS File -->
 		<link href="css/newStyle.css" rel="stylesheet" type="text/css" />
 
@@ -29,14 +30,14 @@
 		<!-- Home Page -->
 		<div data-role="page" id="home">
 			<!-- Header -->
-			<div data-role="header" data-position="fixed">
+			<div data-role="header" data-position="fixed" data-theme="b">
 					<h1>Memory Vault</h1>
 			</div> <!-- /Header -->
 			<!-- Content -->
 			<div data-role="content">
 				<!-- Feature -->
 				<div>
-						<a href="#addItem" data-transition="slide"><img src="img/MiU-CTA_rev5.jpg"></a>
+						<a href="addItem.html" data-ajax="false" data-transition="slide"><img src="img/MiU-CTA_rev5.jpg"></a>
 				</div> <!-- /Feature -->
 				<!-- Search -->
 				<div>
@@ -74,7 +75,7 @@
 			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" class="ui-btn-active ui-state-persist" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="#addItem" data-icon="plus" data-transition="slide">Add Memory</a></li>
+					<li><a href="addItem.html" data-ajax="false" data-icon="plus" data-transition="slide">Add Memory</a></li>
 					<li><a href="#recentMem" data-icon="grid" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>
@@ -83,37 +84,41 @@
 
 
 		<!-- Add Item Page -->
-		<div data-role="page" id="addItem" data-add-back-btn="true">
+		<div data-role="page" id="addItem" data-add-back-btn="true" data-theme="b">
 			<!-- Header -->
-			<div data-role="header" data-position="fixed">
+			<div data-role="header" data-position="fixed" data-theme="b">
 					<h1>Add Memory</h1>
 			</div> <!-- /Header -->
 			<!-- Content -->
 			<div data-role="content">
+				<p>* required fields</p>
 				<!-- Form -->
 				<form action="" method="post" id="newMemForm">
 					<!-- Form Elements -->
-					<ul data-role="listview" data-inset="true">
+					<ul data-role="listview" data-inset="true" id="ulForm">
 						<!-- Occasion -->
 						<li data-role="fieldcontain">
-							<label for="occasion">Occasion</label>
+							<label for="occasion">Occasion*</label>
 							<input type="text" name="occasion" id="occasion" title="The name of the event goes here" placeholder="Name of event" class="required" />
 						</li><!-- /Occasion -->
-							<!-- Date -->
+						<!-- Date -->
 						<li data-role=fieldcontain>
-							<label for=date>Date</label>
-							<input type=date name=date id=date class="date required" placeholder="yyyy/mm/dd" />
+							<label for="date">Date*</label>
+							<input type="date" name="date" id="date" data-native-menu="false" />
 							<!-- <p>Date format goes here</p> -->
 						</li><!-- /Date -->
-						<!-- Importance -->
+						<!-- Important -->
 						<li data-role="fieldcontain">
-							<label for="importance">Importance (Scale of 1-10)</label>
-							<input type="range" name="importance" id="importance" value=5 min=1 max=10 />
-						</li><!-- /Importance -->
+				            <label for="importance">Important</label>
+				            <select data-role="slider" name="importance" title="Was this event important?" id="importance">
+				                <option value="no">No</option>
+				                <option value="yes">Yes</option>
+				            </select>
+				        </li><!-- /Important -->
 						<!-- Mood -->
 						<li data-role="fieldcontain">
-							<label for="mood">Mood of even</label>
-							<select name="mood" id="mood" data-native-menu="false" class="required">
+							<label for="mood">Mood of even*</label>
+							<select name="mood" id="mood" data-native-menu="false" title="Set the mood of the event" class="required" value="">
 								<option value="">--Choose Mood--</option>
 								<option value="fun">Fun</option>
 								<option value="memorable">Memorable</option>
@@ -123,7 +128,7 @@
 						<!-- Shared With -->
 						<li data-role="fieldcontain">
 							<fieldset data-role="controlgroup">
-								<legend>Shared With</legend>
+								<legend>Shared With*</legend>
 								<label for="family">Family</label>
 								<input type="checkbox" value="Family" id="family" name="sharedWith" class="required" />
 								<label for="significantOther">Significant other</label>
@@ -147,14 +152,12 @@
 						<li data-role="fieldcontian">
 							<div><input type="submit" value="Save memory" data-icon="check" data-iconpos="right" data-theme="b"></div>
 						</li><!-- /Submit Button -->
+						<li data-role="fieldcontian">
+							<div><input type="reset" data-mini="true" value="Reset form" data-icon="delete" data-iconpos="right"></div>
+						</li><!-- /Reset Button -->
 					</ul><!-- /Form Elements -->
+					<a href="#addItemErrors" id="errorLink" data-rel="dialog" data-transition="pop">Errors</a>
 				</form> <!-- /Form -->
-				<!-- Reset Buttons -->
-				<div data-role="fieldcontian">
-					<div><input type="reset" data-mini="true" value="Reset form" data-icon="delete" data-iconpos="right" data-theme="a"></div>
-				</div><!-- /Reset Button -->
-				<a href="#addItemErrors" id="errorLink" data-rel="dialog" data-transition="pop">Errors</a>
-	
 			</div> <!-- /Content -->
 			<!-- Navigation -->
 			<div data-role="navbar" data-id="appNav" data-position="fixed">
@@ -162,7 +165,7 @@
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
 					<li><a href="#addItem" class="ui-btn-active ui-state-persist" data-icon="plus" data-transition="slide">Memory</a></li>
 					<li><a href="#recentMem" data-icon="bars" data-transition="slide">Recent</a></li>
-					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About Us</a></li>
+					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About</a></li>
 				</ul>
 			</div> <!-- /Navigation -->
 		</div> <!-- /Add Item Page -->
@@ -170,7 +173,7 @@
 
 		<!-- Recent Memories -->
 		<div data-role="page" id="recentMem" data-add-back-btn="true">
-			<div data-role="header" data-position="fixed">
+			<div data-role="header" data-position="fixed" data-theme="b">
 					<h1>Recent Memories</h1>
 			</div> <!-- /Header -->
 			<div data-role="content" >
@@ -201,11 +204,11 @@
 				    	</div>
 				    </div>
 					<div class="ui-block-b">
-						<div class="ui-bar ui-bar-c">
+						<div class="ui-bar ui-bar-c"></br>
 							<h2>September 11th</h2>
 							<a href="#"><img src="img/Sad.png">
 					        <!-- <p>September 11, 2001</p>
-					        <p>Unbelievable tragedy</p> --></a></br>
+					        <p>Unbelievable tragedy</p> --></a>
 					    </div>
 					</div>
 				</div> <!-- /Grid -->
@@ -214,7 +217,7 @@
 			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="#addItem" data-icon="plus" data-ajax="false" data-transition="slide">Add Memory</a></li>
+					<li><a href="addItem.html" data-ajax="false" data-icon="plus" data-ajax="false" data-transition="slide">Add Memory</a></li>
 					<li><a href="#recentMem" class="ui-btn-active ui-state-persist" data-icon="grid" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>
@@ -225,7 +228,7 @@
 		<!-- About Us -->
 		<div data-role-"page" id="aboutUs" data-add-back-btn="true">
 			<!-- Header -->
-			<div data-role="header" data-position="fixed">
+			<div data-role="header" data-position="fixed" data-theme="b">
 					<h1>About Us</h1>
 			</div> <!-- /Header -->
 			<!-- Content -->
@@ -262,7 +265,7 @@
 			<div data-role="navbar" data-id="appNav" data-position="fixed">
 				<ul>
 					<li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-					<li><a href="#addItem" data-icon="plus" data-transition="slide">Add Memory</a></li>
+					<li><a href="addItem.html" data-ajax="false" data-icon="plus" data-transition="slide">Add Memory</a></li>
 					<li><a href="#recentMem" data-icon="grid" data-transition="slide">Recent</a></li>
 					<li><a href="#aboutUs" class="ui-btn-active ui-state-persist" data-icon="info" data-transition="slide">About Us</a></li>
 				</ul>

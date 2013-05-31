@@ -3,6 +3,7 @@
 // Project 4
 // Gold app
 
+
 // #home page ready function
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
@@ -56,6 +57,21 @@ var autofillData = function (){
 
 var getData = function(){
 	console.log(data);
+};
+
+// Get checked values
+function getCheckedValues(){
+	var checkboxes = $("#checkboxes").sharedWith,
+		checkedValues = [];
+	for (i=0; i<checkboxes.length; i++){
+		if(checkboxes[i].checked ){
+			checkedValues.push(checkboxes[i].val());
+		}
+	}
+	console.log($("#checkboxes"));
+	console.log(checkedValues);
+	return checkedValues;
+}
 
 var storeData = function(data, key){
 		if(!key){
@@ -68,12 +84,12 @@ var storeData = function(data, key){
 		memory.date = ['Date: ', $('#date').val()];
 		memory.importance = ['Importance: ', $('#importance').val()];
 		memory.eventMood = ['Mood: ', $('#mood').value];
-		memory.including = ['Shared With: ', getCheckedValues()];
+		memory.including = ['Shared With: ', $("#checkboxes").val()];
+		// memory.including = ['Shared With: ', getCheckedValues()];
 		memory.notes = ['Notes: ', $('#notes').val()];
 		// Save data to local Storage
 		localStorage.setItem(id, JSON.stringify(memory));
 		alert('Your memory is safe!!');
-	};
 };
 
 var	deleteItem = function (){
